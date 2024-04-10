@@ -5,7 +5,7 @@
 	(uuid "4167ffbf-dac9-455c-9662-acf6ff0b6a94")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Conn_01x03_Socket"
+		(symbol "Connector:Conn_01x04_Socket"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -19,8 +19,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03_Socket"
-				(at 0 -5.08 0)
+			(property "Value" "Conn_01x04_Socket"
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -45,7 +45,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated"
+			(property "Description" "Generic connector, single row, 01x04, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -80,11 +80,35 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x03_Socket_1_1"
+			(symbol "Conn_01x04_Socket_1_1"
+				(arc
+					(start 0 -4.572)
+					(mid -0.5058 -5.08)
+					(end 0 -5.588)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(arc
 					(start 0 -2.032)
 					(mid -0.5058 -2.54)
 					(end 0 -3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -0.508 -5.08)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -200,6 +224,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1418,10 +1460,6 @@
 		(color 0 0 0 0)
 		(uuid "b2a4bcd2-ffe1-4861-a15e-eaea8eb60848")
 	)
-	(no_connect
-		(at 184.15 57.15)
-		(uuid "5e043fa3-4a12-416b-90ae-4861505a5f3c")
-	)
 	(wire
 		(pts
 			(xy 127 83.82) (xy 130.81 83.82)
@@ -1431,6 +1469,16 @@
 			(type default)
 		)
 		(uuid "006329b5-e3db-45df-ab1e-3ac94ece8805")
+	)
+	(wire
+		(pts
+			(xy 88.9 66.04) (xy 91.44 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0135116d-c1b8-42f3-89b7-6704b31cf24a")
 	)
 	(wire
 		(pts
@@ -1764,6 +1812,16 @@
 	)
 	(wire
 		(pts
+			(xy 184.15 57.15) (xy 189.23 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb3ef7aa-84f7-48f7-b3f6-15195644312f")
+	)
+	(wire
+		(pts
 			(xy 148.59 92.71) (xy 154.94 92.71)
 		)
 		(stroke
@@ -2034,6 +2092,28 @@
 			)
 		)
 	)
+	(global_label "DO"
+		(shape input)
+		(at 91.44 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cdf3e083-2336-4df5-9cb0-28f9fcce1712")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 97.0257 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "col4"
 		(shape input)
 		(at 105.41 88.9 0)
@@ -2047,6 +2127,28 @@
 		(uuid "cffdc0df-3aee-4847-ac7f-120a0f946e45")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 112.5075 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "DO"
+		(shape output)
+		(at 189.23 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dceefd72-9988-4cf1-8d30-bc4ba47e4fa2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 194.8157 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2209,6 +2311,70 @@
 			(project "microswitch-dpad"
 				(path "/4167ffbf-dac9-455c-9662-acf6ff0b6a94"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ct-kicad:awesome-logo")
+		(at 181.61 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "15a72e6d-709b-4a90-8d7d-5af8d559a67e")
+		(property "Reference" "LOGO2"
+			(at 184.15 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "**REF"
+			(at 184.15 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ct-kicad:awesome-logo"
+			(at 181.61 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "the crazymittens logo"
+			(at 181.61 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "microswitch-dpad"
+				(path "/4167ffbf-dac9-455c-9662-acf6ff0b6a94"
+					(reference "LOGO2")
 					(unit 1)
 				)
 			)
@@ -3310,17 +3476,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Socket")
+		(lib_id "Connector:Conn_01x04_Socket")
 		(at 83.82 71.12 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dfda38fa-76ab-4583-bcab-2f78268838e3")
 		(property "Reference" "J2"
-			(at 84.455 63.5 0)
+			(at 84.455 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3328,14 +3494,14 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Socket"
-			(at 84.455 66.04 0)
+			(at 84.455 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
 			(at 83.82 71.12 0)
 			(effects
 				(font
@@ -3353,7 +3519,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated"
+		(property "Description" "Generic connector, single row, 01x04, script generated"
 			(at 83.82 71.12 0)
 			(effects
 				(font
@@ -3370,6 +3536,9 @@
 		)
 		(pin "2"
 			(uuid "8412c1c1-a026-4796-bcd5-3e9b6b01e042")
+		)
+		(pin "4"
+			(uuid "2e330778-cc48-45b4-ae8f-b255e7e2f235")
 		)
 		(instances
 			(project "microswitch-dpad"
@@ -3442,70 +3611,6 @@
 			(project "microswitch-dpad"
 				(path "/4167ffbf-dac9-455c-9662-acf6ff0b6a94"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ct-kicad:awesome-logo")
-		(at 167.64 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f1cc9f29-3a90-421d-846c-0e83ad0a2843")
-		(property "Reference" "LOGO1"
-			(at 170.18 36.8299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "**REF"
-			(at 170.18 39.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "ct-kicad:awesome-logo"
-			(at 167.64 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "the crazymittens logo"
-			(at 167.64 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "microswitch-dpad"
-				(path "/4167ffbf-dac9-455c-9662-acf6ff0b6a94"
-					(reference "LOGO1")
 					(unit 1)
 				)
 			)
